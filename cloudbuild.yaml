@@ -11,7 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+options:
+  logging: CLOUD_LOGGING_ONLY
 
 steps:
 - id: 'branch name'
@@ -23,8 +24,6 @@ steps:
       echo "***********************"
       echo "$BRANCH_NAME"
       echo "***********************"
-options:
-  logging: CLOUD_LOGGING_ONLY
 
 - id: 'tf init'
   name: 'hashicorp/terraform:1.0.0'
