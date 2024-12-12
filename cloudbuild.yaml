@@ -23,6 +23,8 @@ steps:
       echo "***********************"
       echo "$BRANCH_NAME"
       echo "***********************"
+options:
+  logging: CLOUD_LOGGING_ONLY
 
 - id: 'tf init'
   name: 'hashicorp/terraform:1.0.0'
